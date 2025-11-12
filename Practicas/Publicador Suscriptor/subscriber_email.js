@@ -6,11 +6,11 @@ async function connectWithRetry() {
     try {
       console.log("[EMAIL] Intentando conectar a RabbitMQ...");
       const connection = await amqp.connect("amqp://rabbitmq");
-      console.log("[EMAIL] Conectado a RabbitMQ ✅");
+      console.log("[EMAIL] Conectado a RabbitMQ");
       return connection;
     } catch (err) {
       console.error(
-        "[EMAIL] No se pudo conectar a RabbitMQ. Reintentando en 5s...",
+        "[EMAIL] No se pudo conectar",
         err.message
       );
       await new Promise((res) => setTimeout(res, 5000));

@@ -14,7 +14,7 @@ async function connectWithRetry() {
       const connection = await amqp.connect("amqp://rabbitmq"); 
       channel = await connection.createChannel();
       await channel.assertExchange(exchangeName, "fanout", { durable: false });
-      console.log("[API] Conectado a RabbitMQ y listo para publicar mensajes ✅");
+      console.log("[API] Conectado a RabbitMQ y listo para publicar mensajes");
       break;
     } catch (err) {
       console.error(
