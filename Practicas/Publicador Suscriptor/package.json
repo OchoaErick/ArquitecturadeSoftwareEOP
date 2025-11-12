@@ -1,0 +1,15 @@
+{
+  "name": "pubsub-subscribers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "subscriber_log.js",
+  "scripts": {
+    "start": "node subscriber_log.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.4"
+  }
+}
